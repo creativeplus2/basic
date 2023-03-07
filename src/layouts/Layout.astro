@@ -1,0 +1,43 @@
+---
+import Header from '../components/Header.astro';
+import '../styles.css';
+
+export interface Props {
+	title: string;
+	slug: string;
+}
+
+const { title, slug } = Astro.props;
+---
+
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width" />
+		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+		<meta name="generator" content={Astro.generator} />
+		<title>{title}</title>
+		<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/locomotive-scroll@3.5.4/dist/locomotive-scroll.css">
+
+	</head>
+	<body data-barba="wrapper">
+		<div class="loading-fade fixed inset-0 bg-dark z-50"></div>
+			<main data-barba="container" data-barba-namespace={slug} >
+				<Header/>
+
+				<div class="wrapper" data-scroll-container>
+					<section class="shadow-nav-bar h-16 md:h-20 py-0" data-scroll-section>
+
+					</section>
+					<slot />
+				</div>
+			</main>
+	</body>
+	<script src="/js/SplitText.min.js" is:inline></script>
+</html>
+<script> 
+	import initPageTransitions from "../js/index.js"
+	initPageTransitions()
+</script>
+

@@ -1,0 +1,22 @@
+---
+export interface Props {
+	classlist?: string;
+    bgimage?: string;
+    overlay?: string;
+}
+const { classlist, bgimage, overlay  } = Astro.props
+---
+<section class={`relative py-[var(--padding)] ` + (classlist ? ` ` + classlist : ``)} data-scroll-section>
+    {bgimage && 
+    <div class="inset-0 w-full h-full absolute overflow-hidden flex justify-center items-center">
+        <img src={bgimage} class="object-cover inset-0 w-full h-[calc(100%+10vh)] scroll scroll-1" />
+
+    </div>
+    }
+    {overlay && 
+        <div class={`absolute inset-0 w-full h-full ` + overlay}></div>
+    }
+         
+
+    <slot />
+</section>

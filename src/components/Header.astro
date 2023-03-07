@@ -1,0 +1,115 @@
+---
+// const data = await fetch(import.meta.env.BASE_URL_ADMIN + '/api/collections/get/menu',
+//   {
+//     method: 'POST',
+//     headers: {'cockpit-token' : import.meta.env.TOKEN},
+//   }
+//   ).then(response => response.json());
+
+const menus = [
+        {
+            "title": "About",
+            "link": {
+                "_id": "bd91ed32326365276d0002da",
+                "link": "pages",
+                "display": "about"
+            },
+            "url": null,
+            "_mby": "87dd9291633862441e000062",
+            "_by": "87dd9291633862441e000062",
+            "_o": 0,
+            "_modified": 1666346520,
+            "_created": 1666346520,
+            "_id": "c3ec95d06361614165000370",
+            "children": []
+        },
+        {
+            "title": "Home",
+            "link": {
+                "_id": "c3e7d33b3239357bdb0000bd",
+                "link": "pages",
+                "display": ""
+            },
+            "url": null,
+            "_mby": "87dd9291633862441e000062",
+            "_by": "87dd9291633862441e000062",
+            "_o": 1,
+            "_modified": 1666346538,
+            "_created": 1666346538,
+            "_id": "c3ef65f8663965136600014e",
+            "children": []
+        },
+        {
+            "title": "Contact Us",
+            "link": null,
+            "url": "#",
+            "_mby": "87dd9291633862441e000062",
+            "_by": "87dd9291633862441e000062",
+            "_o": 2,
+            "_modified": 1666346561,
+            "_created": 1666346561,
+            "_id": "c3f2e96165306672aa0000db",
+            "children": []
+        }
+    ];
+---
+<header class="nav-bar w-full z-10 theme-dark fixed duration-200 ease-in">
+    <div class="mx-auto flex justify-between items-center h-16 md:h-20 px-gap">
+        <div class="logo font-black text-xl"><a href="/">CV.CSI</a></div>
+        <div class="nav ">
+            <div class="hamburger z-20 transform duration-200 ease-out w-12 h-12 rounded-full cursor-pointer relative flex justify-center items-center
+            md:hidden">
+               <span class="hamburger-box relative focus:outline-none flex flex-col justify-between">
+                   <span class="hamburger-inner-1 transform duration-200 ease-in"></span>
+                   <span class="hamburger-inner-3 transform duration-200 ease-in"></span>
+               </span>
+           </div>
+            <ul class="hidden md:flex space-x-10 text-grey">
+                {menus.map(menu => 
+                    <li><a href={menu.link && "/" + menu.link.display } >{menu.title}</a></li>
+                )}
+            </ul>
+        </div>
+    </div>
+
+    <div class="mobile-nav opacity-0 invisible top-0 z-10 fixed bg-navy w-full h-full p-[15%] flex flex-col justify-between">
+        <ul class="flex flex-col space-y-6 text-white  text-3xl font-bold">
+            {menus.map(menu => 
+                <li class="mobile-nav-item"><a href={menu.link && "/" + menu.link.display }>{menu.title}</a></li>
+            )}
+        </ul>
+        <div class="text-white mobile-nav-info">
+            <h4>CV. CSI</h4>
+            <p class="text-white">info@example.com
+                jobs@example.com
+                982 645 586 68
+                32 (125) 2 265 26
+                12/A, Pro Street City, Jakata, 
+                NYC</p>
+        </div>
+    </div>
+</header>
+
+<style>
+    .hamburger-box {
+        width: 18px;
+        height: 10px;
+    }
+    .hamburger-inner-1,
+    .hamburger-inner-3 {
+        height: 2px;
+    }
+    .active .hamburger-inner-1 {
+        @apply translate-y-[4px] rotate-45;
+    }
+    .active .hamburger-inner-3{
+        @apply -translate-y-[4px] -rotate-45;
+    }
+    .theme-dark .hamburger-inner-1, .theme-dark .hamburger-inner-3 {
+        @apply bg-light;
+    }
+    .theme-light .hamburger-inner-1, .theme-light .hamburger-inner-3 {
+        @apply bg-dark;
+    }
+
+</style>

@@ -1,0 +1,422 @@
+---
+
+---
+<a href="https://avvr.nl/werken-bij" class="btn btn-animate desktop self-start">
+    <div class="arrow first">
+       <div class="arrow-fill"></div>
+       <div class="arrow-content">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><polyline points="18 8 18 18 8 18" fill="none" stroke="#000" stroke-miterlimit="10"></polyline><line x1="18" y1="18" x2="5" y2="5" fill="none" stroke="#000" stroke-miterlimit="10"></line></svg>                        </div>
+    </div>
+    <div class="btn-content">
+       <div class="btn-fill"></div>
+       <div class="btn-text">
+          <span>Werken bij AVVR</span>
+       </div>
+    </div>
+    <div class="arrow second border">
+       <div class="arrow-fill"></div>
+       <div class="arrow-content">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><polyline points="18 8 18 18 8 18" fill="none" stroke="#000" stroke-miterlimit="10"></polyline><line x1="18" y1="18" x2="5" y2="5" fill="none" stroke="#000" stroke-miterlimit="10"></line></svg>                        </div>
+    </div>
+ </a>
+ <style is:inline>
+/* ------------------------- Buttons -------------------------------------------------- */
+
+.btn-row {
+   width: 100%;
+   position: relative;
+   display: inline-flex;
+   gap: 1em;
+}
+
+.btn {
+   cursor: pointer;
+   border: 0;
+   background: transparent;
+   padding: 0;
+   font-size: 1em;
+   display: flex;
+   align-items: center;
+   justify-content: center;
+   position: relative;
+   text-decoration: none;
+   outline: 0;
+   border-radius: 1000em;
+   white-space: nowrap;
+}
+
+.btn-content {
+   position: relative;
+   height: 3.75em;
+   transform: translateX(-3.75em) rotate(0.001deg);
+   transition: transform var(--animation-primary);
+}
+
+.btn-fill {
+   background: var(--color-light-medium);
+   position: absolute;
+   width: 100%;
+   height: 100%;
+   border-radius: 2.125em;
+   top: 0;
+   left: 0;
+}
+
+.theme-dark .btn-fill {
+   background: var(--color-dark-medium);
+}
+
+.btn-text {
+   display: flex;
+   align-items: center;
+   justify-content: center;
+   width: 100%;
+   height: 100%;
+   padding: 0 2em;
+   font-size: 400;
+   position: relative;
+   color: var(--color-dark-medium);
+   border-radius: 1000em;
+}
+
+.btn-text span {
+   transition: var(--animation-primary);
+}
+
+.theme-dark .btn-text {
+   color: var(--color-light-medium);
+}
+
+.btn .arrow {
+   transition: transform var(--animation-primary);
+}
+
+.btn .arrow.first {
+   transform: scale(0) rotate(0.001deg);
+   transform-origin: left;
+}
+
+.btn .arrow.second {
+   position: absolute;
+   z-index: 2;
+   right: 0;
+   transform: scale(1) rotate(0.001deg);
+   transform-origin: right;
+}
+
+.btn .arrow.first .arrow-fill {
+   background: var(--color-secondary);
+   border: 0;
+}
+
+.btn .arrow.first .arrow-content {
+   color: var(--color-light);
+}
+
+/* --- Hover--- */
+
+@media (hover: hover) {
+
+   .btn:hover .arrow .arrow-content {
+      transform: rotate(-45deg);
+   }
+
+   .btn:hover .arrow.first {
+      transform: scale(1) rotate(0.001deg);
+   }
+
+   .btn:hover .arrow.second {
+      transform: scale(0) rotate(0.001deg);
+   }
+
+   .btn:hover .btn-content {
+      transform: translateX(0em) rotate(0.001deg);
+   }
+
+}
+
+@media screen and (max-width: 540px) {
+   .btn-content {
+      height: 3.25em;
+      transform: translateX(-3.25em) rotate(0.001deg);
+   }
+
+   .btn .arrow {
+      height: 3.25em;
+      width: 3.25em;
+   }
+
+   .btn-text {
+      padding: 0 1.5em;
+   }
+
+   .btn-text span {
+      font-size: 0.9em;
+   }
+}
+
+
+/* --- Small --- */
+
+.btn-small .btn-content {
+   height: 2em;
+   transform: translateX(-2em) rotate(0.001deg);
+}
+
+.btn-small .btn-text {
+   padding: 0 0.5em;
+}
+
+.btn-small .btn-fill {
+   background: transparent;
+}
+
+.btn-small .btn-text span {
+   font-size: 0.85em;
+}
+
+/* --- Hover--- */
+
+.btn-small .arrow .arrow-content {
+   transform: rotate(-45deg);
+}
+
+@media (hover: hover) {
+
+   .btn-small:hover .btn-content {
+      transform: translateX(0em) rotate(0.001deg);
+   }
+
+}
+
+/* --- Small Flipped --- */
+
+.btn-small.flipped .arrow .arrow-content {
+   transform: rotate(0deg);
+}
+
+.btn-small.flipped .arrow.first {
+   transform: scale(1) rotate(0.001deg);
+}
+
+.btn-small.flipped .arrow.second {
+   transform: scale(0) rotate(0.001deg);
+}
+
+@media (hover: hover) {
+
+   .btn-small.flipped:hover .arrow.first {
+      transform: scale(0) rotate(0.001deg);
+   }
+
+   .btn-small.flipped:hover .arrow.second {
+      transform: scale(1) rotate(0.001deg);
+   }
+
+}
+
+.btn-small.flipped .btn-content {
+   transform: translateX(0em) rotate(0.001deg);
+}
+
+@media (hover: hover) {
+
+   .btn-small.flipped:hover .btn-content {
+      transform: translateX(-2em) rotate(0.001deg);
+   }
+
+}
+
+.btn-small.flipped .arrow.first .arrow-fill {
+   border: 1px solid var(--color-border);
+   background: transparent;
+}
+
+.theme-dark .btn-small.flipped .arrow.first .arrow-fill {
+   border: 1px solid var(--color-border-light);
+}
+
+.btn-small.flipped.negative span,
+.btn-small.flipped.positive span {
+   padding-left: 0.5em;
+   font-size: 0.85em;
+   color: var(--color-light);
+   opacity: 1;
+   transition: var(--animation-primary);
+}
+
+.btn-small.flipped .arrow.second {
+   right: unset;
+   left: 0;
+}
+
+.btn-small.flipped.negative .arrow.second .arrow-fill {
+   border: 0;
+   background: var(--color-secondary);
+}
+
+.btn-small.flipped.positive .arrow.second .arrow-fill {
+   border: 0;
+   background: var(--color-alert-success);
+}
+
+.btn-small.flipped .arrow.first .arrow-content {
+   color: var(--color-dark);
+}
+
+.theme-dark .btn-small.flipped .arrow.first .arrow-content {
+   color: var(--color-light);
+}
+
+.btn-small.flipped .arrow.second .arrow-content {
+   color: var(--color-light);
+}
+
+/* --- Link --- */
+
+.btn-link .btn-content {
+   transform: translateX(0) rotate(0.001deg);
+}
+
+.btn-link .btn-content .btn-text {
+   padding: 0;
+}
+
+.btn-link .btn-content::after {
+   content: "";
+   bottom: 0;
+   width: 100%;
+   left: 0;
+   height: 1px;
+   background: var(--color-secondary);
+   position: absolute;
+   transform: rotate(0.001deg) scaleX(0);
+   transition: transform var(--animation-primary);
+   transform-origin: right;
+}
+
+@media (hover: hover) {
+
+   .btn-link:hover .btn-content::after {
+      transform: rotate(0.001deg) scaleX(1);
+      transform-origin: left;
+   }
+
+   .btn-link:hover span {
+      opacity: .66;
+   }
+
+}
+
+/* --- Link Tiny --- */
+
+.btn-tiny .btn-content {
+   height: 1.5em;
+}
+
+.btn-tiny .btn-text span {
+   font-size: 0.75em;
+}
+
+/* Button Arrow */
+
+button.btn-arrow {
+   border: 0;
+   outline: 0;
+   padding: 0;
+   transform: rotate(0.001deg) scale(1);
+   transition: var(--animation-primary);
+}
+
+button.btn-arrow[disabled] {
+   transform: rotate(0.001deg) scale(0);
+}
+
+button.btn-arrow.btn-prev .arrow .arrow-content {
+   transform: scaleX(-1) rotate(-45deg);
+}
+
+button.btn-arrow.btn-next .arrow .arrow-content {
+   transform: rotate(-45deg);
+}
+/* ------------------------- Arrow -------------------------------------------------- */
+
+.arrow {
+   display: inline-flex;
+   justify-content: center;
+   align-items: center;
+   position: relative;
+   width: 3.75em;
+   height: 3.75em;
+   border-radius: 50%;
+   transform: rotate(0.001deg);
+}
+
+.arrow .arrow-fill {
+   position: absolute;
+   width: 100%;
+   height: 100%;
+   border-radius: 50%;
+   background: var(--color-dark-medium);
+}
+
+.arrow .arrow-fill-hover {
+   position: absolute;
+   width: 100%;
+   height: 100%;
+   border-radius: 50%;
+   background: var(--color-secondary);
+   transform: scale(0);
+   transition: transform var(--animation-primary);
+}
+
+.arrow .arrow-content {
+   width: 1.4em;
+   position: relative;
+   display: flex;
+   color: var(--color-light);
+   transform: rotate(0.001deg);
+   transition: transform var(--animation-primary);
+}
+
+.arrow .arrow-content svg :is(polyline, line, path) {
+   stroke: currentColor;
+   stroke-width: 0.075em;
+}
+
+/* Border */
+
+.arrow.border .arrow-fill {
+   background: transparent;
+   border: 1px solid var(--color-border);
+}
+
+.arrow.border .arrow-content {
+   color: var(--color-dark);
+}
+
+.theme-dark .arrow.border .arrow-fill {
+   border: 1px solid var(--color-border-light);
+}
+
+.theme-dark .arrow.border .arrow-content {
+   color: var(--color-light);
+}
+
+/* Secondary */
+
+.arrow.secondary .arrow-fill {
+   background: var(--color-secondary);
+}
+
+/* Small */
+
+.arrow.small {
+   width: 2em;
+   height: 2em;
+}
+
+.arrow.small .arrow-content {
+   width: 1em;
+}
+ </style>

@@ -1,0 +1,115 @@
+---
+const slides = [
+        {
+            "title": "Contactverbod VvE-lid mogelijk, mits ‘proportioneel’",
+            "url": null,
+            "category": "Uitgelicht",
+            "author": "Van Basten",
+            "authorimage": "https://avvr.nl/media/pages/team/richard-de-laat/474657fd05-1672944768/wndrlst-richard-2023-v1-180x240-crop-q72.jpg",
+            "image": "/assets/cytonn-photography-n95VMLxqM2I-unsplash.jpg",
+            "tags": ['artikel','news']
+        },
+        {
+            "title": "sadasd VvE-lid mogelijk, mits ‘proportioneel’",
+            "url": null,
+            "category": "Uitgelicht",
+            "author": "Van Basten",
+            "authorimage": "https://avvr.nl/media/pages/team/wouter-van-galen/851a400076-1675689338/wouter-van-galen2-180x240-crop-q72.jpg",
+            "image": "/assets/krakenimages-Y5bvRlcCx8k-unsplash.jpg",
+            "tags": ['artikel','news']
+        },
+        {
+            "title": "nbgfbfg VvE-lid mogelijk, mits ‘proportioneel’",
+            "url": null,
+            "category": "Uitgelicht",
+            "author": "Van Maradona",
+            "authorimage": "https://avvr.nl/media/pages/team/richard-de-laat/474657fd05-1672944768/wndrlst-richard-2023-v1-180x240-crop-q72.jpg",
+            "image": "https://avvr.nl/media/pages/actueel/artikelen/gemeentehuis-gesloten-wegens-het-coronavirus-wat-te-doen-met-de-terinzagelegging-van-ontwerpbesluiten/4ccca350d3-1672396740/thumb-1920x-q72.jpg",
+            "tags": ['artikel','news']
+        },
+        {
+            "title": "sadasd VvE-lid mogelijk, mits ‘proportioneel’",
+            "url": null,
+            "category": "Uitgelicht",
+            "author": "Van Basten",
+            "authorimage": "https://avvr.nl/media/pages/team/wouter-van-galen/851a400076-1675689338/wouter-van-galen2-180x240-crop-q72.jpg",
+            "image": "https://avvr.nl/media/pages/actueel/artikelen/erfpacht-als-instrument-bij-woningbouw-op-zorglocaties/ceac916500-1672396736/thumb-1920x-q72.jpg",
+            "tags": ['artikel','news']
+        },
+    ];
+---
+<div class="theme-dark actueel-swiper-slider overflow-hidden relative">
+    <div class="swiper-container swiper-container-main">
+        <ul class="swiper-wrapper overflow-hidden">
+
+            {slides.map(slide => 
+        
+            <li class="single-actueel-slide swiper-slide flex items-center relative grow pt-[calc(var(--padding)*1.5)] pb-[calc(var(--padding)*1.75)]">
+                <div class="absolute inset-0 w-full h-full overlay-zoom">
+                        <img
+                        class="bg-cover bg-center w-full"
+                        src={slide.image}
+                        alt="Actueel"
+                        width="1920"
+                        height="1280"
+                        />
+                </div>
+                <div class="absolute inset-0 bg-dark opacity-50 w-full h-full"></div>
+
+                <div class="container z-10">
+                    <div class="flex flex-row justify-between fade-in">
+                        <div class="flex flex-col w-4/6 gap-[2em]">
+                            <p class="small small-title">{slide.category}</p>
+                        <div>
+                            <h1 class="line-clamp-2 text-white overflow-hidden ">
+                            <a
+                                href={slide.url}
+                                >{slide.title}</a>
+                            </h1>
+                        </div>
+                        <div class="tags">
+                            <a href="https://avvr.nl/actueel/artikelen" class="single-tag"
+                            ><span>Artikel</span></a>
+                            <a
+                            href="https://avvr.nl/actueel/artikelen/expertise:vastgoed"
+                            class="single-tag primary"><span>Vastgoed</span></a>
+                        </div>
+                        </div>
+                        <div class="flex flex-col w-2/6">
+                            <p class="small small-title">Gepubliceerd op: 21 Mar 2020</p>
+                            <div class="author-box flex flex-col gap-2">
+                                <a
+                                href="https://avvr.nl/team/wouter-van-galen"
+                                class="author-single-author flex items-center gap-2"
+                                >
+                                <div class="author-image relative w-[4em] border-r-4">
+                                    <img
+                                    class="overlay lazy"
+                                    src={slide.authorimage}
+                                    alt="Wouter van Galen"
+                                    width="720"
+                                    height="480"
+                                    />
+                                    <div class="overlay overlay-dark"></div>
+                                </div>
+                                <div class="author-content">
+                                    <h4 class="name">{slide.author}</h4>
+                                    <p class="small job-title">Partner &amp; Advocaat</p>
+                                </div>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </li>
+        )}
+        </ul>
+        <div class="absolute inset-0 h-full w-full py-[100px] z-10 flex items-end">
+            <div class="container">
+                <div class="flex flex-row justify-between w-4/6 relative ">
+                    <div class="swiper-pagination absolute"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

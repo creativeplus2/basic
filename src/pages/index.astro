@@ -1,0 +1,116 @@
+---
+import Layout from '../layouts/Layout.astro'
+// import Section from '../components/Section.astro'
+// import Grid from '../components/Grid.astro'
+// import GridSlider from '../components/GridSlider.astro'
+// import Tabs from '../components/Tabs.astro'
+// import Tabs2 from '../components/Tabs2.astro'
+// import Accordion from '../components/Accordion.astro'
+// import Button from '../components/Button.astro'
+const components = await Astro.glob('../components/*.astro');
+---
+<Layout title="Welcome to Astro." slug="home">
+
+	{components.map((component) => (
+		<div>
+		  <component.file />
+		</div>
+	  ))}
+
+<!-- 
+		<Section 
+			classlist="theme-dark"
+			bgimage="assets/krakenimages-Y5bvRlcCx8k-unsplash.jpg"
+			overlay="bg-black opacity-50"
+		>
+			<Grid classlist="container">
+				<div class="flex flex-col space-y-8">
+					<h1 class="split-words">Abc Desf g jlk specialisten voor als het erop aankomt</h1>
+					<h2 class="scroll-1">Kennis van zaken, ervaring in uw sector</h2>
+					<h3>Kennis van zaken, ervaring in uw sector</h3>
+					<h4>Kennis van zaken, ervaring in uw sector</h4>
+					<Button />
+
+				</div>
+			</Grid>
+		</Section>
+		<Section 
+		classlist="theme-light"
+		>
+			<Grid classlist="container">
+				<Tabs2 />
+
+
+			</Grid>
+
+			
+		</Section>
+		<Section 
+		classlist="theme-light"
+		>
+			<Grid classlist="container">
+				<Accordion />
+			</Grid>
+
+		</Section>
+
+		<Section 
+		classlist="theme-light"
+		>
+			<Grid classlist="container">
+				<Accordion />
+			</Grid>
+
+		</Section>
+
+		<Section classlist="theme-light">
+			<Grid classlist="container grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-20">
+				<div class="bg-red-100 scroll scroll1 ">
+					<p><a class="inline hover-underline-animation"><span>Halo</span></a> halo</p>
+				</div>
+				<div class="bg-red-100 scroll scroll0">
+					Hai
+				</div>
+				<div class="bg-red-100 scroll scroll-1">
+					Aloha
+				</div>
+			</Grid>
+		</Section>
+
+		<Section 
+			classlist="theme-dark"
+			bgimage="assets/redd-f-PTRzqc_h1r4-unsplash.jpg"
+			overlay="bg-black opacity-50"
+		>
+			<Grid classlist="container">
+				<div class="flex flex-col space-y-8 animategroup-bottom-top">
+					<h2>Kennis van zaken, ervaring in uw sector</h2>
+					<h3>Kennis van zaken, ervaring in uw sector</h3>
+					<h4>Kennis van zaken, ervaring in uw sector</h4>
+
+				</div>
+			</Grid>
+		</Section>
+		<Section classlist="theme-light">
+			<div class="container">
+			<GridSlider />
+			</div>
+		</Section>
+		<Section classlist="theme-dark">
+			<Grid classlist="container grid-cols-3 gap-20">
+				<div class="flex flex-col flex-1 ">
+					<h3 class="animate-bottom-top">Ondernemend</h3>
+					<p class="big fade-in" style="">Wij doen er alles aan doen om u vooruit te helpen en durven mee te denken buiten de juridische kaders. Wij zijn besluitvaardig en nemen verantwoordelijkheid.</p>
+				</div>
+				<div class="flex flex-col flex-1 ">
+					<h3>Ondernemend</h3>
+					<p class="big fade-in" style="">Onze bewuste focus maakt dat wij de branche en de markt goed kennen en altijd op de hoogte zijn van ontwikkelingen.</p>
+					</div>
+				<div class="flex flex-col flex-1 ">
+					<h3>Ondernemend</h3>
+					<p class="big fade-in" style="">Snel en adequaat handelen is cruciaal, daarom schakelt u bij ons direct met één van onze advocaten.</p>
+				</div>
+			</Grid>
+		</Section>
+		 -->
+</Layout>

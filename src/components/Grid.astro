@@ -1,0 +1,9 @@
+---
+export interface Props {
+	classlist?: string;
+}
+const { classlist } = Astro.props
+---
+<div class={`grid` + (classlist ? ` ` + classlist : ``)}>
+    <slot />
+</div>

@@ -1,0 +1,68 @@
+---
+---
+<div class="card flex flex-col mx-auto w-[300px] card-slider card-swiper-slider overflow-hidden" >
+    <div class="swiper-container swiper-container-card">
+        <ul class="swiper-wrapper" aria-live="polite">
+
+            <li class="single-card-slide swiper-slide">
+                <h2><em>123</em></h2>
+                <p class="small">Gepubliceerde artikelen</p>
+            </li>
+            <li class="single-card-slide swiper-slide">
+                <h2><em>3434</em></h2>
+                <p class="small">Opgericht in 1987</p>
+            </li>
+            <li class="single-card-slide swiper-slide">
+                <h2><em>sdasdsa </em></h2>
+                <p class="small">Gespecialiseerd in Vastgoed &amp; Ondernemingen</p>
+            </li>
+            
+        </ul>
+       <div class="swiper-pagination"></div>
+    </div>
+</div>
+<style>
+
+
+/* Card Slider */
+.card-swiper-slider .swiper-pagination {
+    position: absolute;
+    left: 20%;
+    top: 0;
+    width: 60%;
+    background: red;
+}
+.card-slider {
+   padding-left: 0;
+   padding-right: 0;
+}
+
+.card-slider .swiper-pagination {
+   position: absolute;
+   left: 20%;
+   top: 0;
+   width: 60%;
+   background: var(--color-primary);
+}
+
+.card-slider .single-card-slide {
+   display: flex;
+   width: 100%;
+   align-items: center;
+   justify-content: center;
+   flex-direction: column;
+   padding-top: 2.5em;
+}
+
+.card-slider .single-card-slide em {
+   font-size: 2em;
+}
+
+.card-slider .single-card-slide p {
+   color: var(--color-light);
+   margin-top: 1em;
+   margin-bottom: 1em;
+   white-space: nowrap;
+   text-align: center;
+}
+</style>

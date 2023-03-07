@@ -1,0 +1,26 @@
+{
+  "name": "@example/basics",
+  "type": "module",
+  "version": "0.0.1",
+  "private": true,
+  "scripts": {
+    "dev": "astro dev",
+    "start": "astro dev",
+    "build": "astro build",
+    "preview": "astro preview",
+    "astro": "astro"
+  },
+  "dependencies": {
+    "@astrojs/tailwind": "^3.0.1",
+    "@barba/core": "^2.9.7",
+    "astro": "^2.0.6",
+    "gsap": "^3.11.4",
+    "locomotive-scroll": "^4.1.4",
+    "swiper": "^9.0.3",
+    "tailwindcss": "^3.2.4"
+  },
+  "devDependencies": {
+    "@barba/prefetch": "^2.1.10",
+    "@tailwindcss/line-clamp": "^0.4.2"
+  }
+}

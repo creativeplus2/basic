@@ -1,0 +1,43 @@
+---
+import Layout from '../layouts/Layout.astro';
+import ImageSlider from '../components/ImageSlider.astro';
+import Section from '../components/Section.astro';
+import Grid from '../components/Grid.astro';
+---
+
+<Layout title="Welcome to Astro." slug="about">
+		<Section classlist="py-[0px]">
+			<ImageSlider />
+		</Section>
+		<Section 
+			classlist="theme-dark"
+			bgimage="assets/krakenimages-Y5bvRlcCx8k-unsplash.jpg"
+			overlay="bg-black opacity-50"
+		>
+			<Grid classlist="container">
+				<div class="flex flex-col space-y-8">
+					<h1 class="split-words">Bereikbare specialisten voor als het erop aankomt</h1>
+					<h2>Kennis van zaken, ervaring in uw sector</h2>
+					<h3>Kennis van zaken, ervaring in uw sector</h3>
+					<h4>Kennis van zaken, ervaring in uw sector</h4>
+
+				</div>
+			</Grid>
+		</Section>
+
+		<Section 
+		classlist="theme-dark"
+		bgimage="assets/krakenimages-Y5bvRlcCx8k-unsplash.jpg"
+		overlay="bg-black opacity-50"
+	>
+		<Grid classlist="container">
+			<div class="flex flex-col space-y-8">
+				<h1 class="split-words">Bereikbare specialisten voor als het erop aankomt</h1>
+				<h2 data-scroll data-scroll-speed="1">Kennis van zaken, ervaring in uw sector</h2>
+				<h3 data-scroll data-scroll-speed="2">Kennis van zaken, ervaring in uw sector</h3>
+				<h4>Kennis van zaken, ervaring in uw sector</h4>
+
+			</div>
+		</Grid>
+	</Section>
+</Layout>

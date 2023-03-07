@@ -1,0 +1,37 @@
+---
+const accordion = [
+    {
+        "title": "home",
+        "content": "halo haldsadasdas asdasdasdaso halo haldsadasdas asdasdasdaso halo haldsadasdas asdasdasdaso halo haldsadasdas asdasdasdaso halo haldsadasdas asdasdasdaso halo haldsadasdas asdasdasdaso halo haldsadasdas asdasdasdaso halo haldsadasdas asdasdasdaso halo haldsadasdas asdasdasdaso halo haldsadasdas asdasdasdaso halo haldsadasdas asdasdasdaso halo haldsadasdas asdasdasdaso halo haldsadasdas asdasdasdaso halo haldsadasdas asdasdasdaso halo haldsadasdas asdasdasdaso halo haldsadasdas asdasdasdaso halo haldsadasdas asdasdasdaso halo haldsadasdas asdasdasdaso halo haldsadasdas asdasdasdaso halo haldsadasdas asdasdasdaso halo haldsadasdas asdasdasdaso halo haldsadasdas asdasdasdaso halo haldsadasdas asdasdasdaso ",
+    },
+    {
+        "title": "css123",
+        "content": "css haloscdscdsc dscs12312321312",
+    },
+    {
+        "title": "script",
+        "content": "script halosadasdas dasdasdasdasdas2",
+    },
+    {
+        "title": "contact",
+        "content": "contact sadasdasd us",
+    },
+];
+---
+{accordion.map(a => 
+<div class="accordion pb-4" data-accordion>
+    <div class="accordion_trigger" data-trigger>
+		<p>{a.title}</p>
+		<span>
+			<svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 transform rotate-180 duration-700" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+				<path stroke-linecap="round" stroke-linejoin="round" stroke-width="3" d="M19 9l-7 7-7-7"></path>
+			</svg>
+		</span>
+    </div>
+    <div class="accordion_content" data-content>
+		<div class="p-2">
+            {a.content}
+	</div>
+    </div>
+</div>
+)}

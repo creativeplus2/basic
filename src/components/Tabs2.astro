@@ -1,0 +1,36 @@
+---
+const tabs = [
+    {
+        "title": "home",
+        "content": "halo haldsadasdas asdasdasdaso",
+    },
+    {
+        "title": "css123",
+        "content": "css haloscdscdsc dscs12312321312",
+    },
+    {
+        "title": "script",
+        "content": "script halosadasdas dasdasdasdasdas2",
+    },
+    {
+        "title": "contact",
+        "content": "contact sadasdasd us",
+    },
+];
+---
+<div class="tabs tabs-horizontal" data-tabs>
+    <div class="tab-button-wrapper" data-triggers>
+        {tabs.map(tab => 
+        <a href={'#'+tab.title} class="tab-button">
+        <button >{tab.title}</button>
+        </a>
+        )}
+    </div>
+    <div class="tab-content-wrapper" data-body>
+        {tabs.map(tab =>
+        <p class="tab-content" data-id={'#'+tab.title}>
+            {tab.content}
+        </p>
+        )}
+    </div>
+</div>

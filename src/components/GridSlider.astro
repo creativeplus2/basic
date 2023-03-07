@@ -1,0 +1,50 @@
+---
+const gridslides = [
+        {
+            "image": "/assets/image-3-4.png",
+            "name": "budi",
+        },
+        {
+            "image": "/assets/image-3-4.png",
+            "name": "john",
+        },
+        {
+            "image": "/assets/image-3-4.png",
+            "name": "doe",
+        },
+        {
+            "image": "/assets/image-3-4.png",
+            "name": "mos",
+        },
+        {
+            "image": "/assets/image-3-4.png",
+            "name": "dew",
+        },
+        {
+            "image": "/assets/image-3-4.png",
+            "name": "what",
+        }
+    ];
+---
+<div class="swiper mySwiper pb-8 overflow-visible">
+    <div class="swiper-wrapper flex animategroup-bottom-top">
+        {gridslides.map(slide => 
+            <div class="swiper-slide w-full relative">
+                <img src={slide.image} class="object-cover aspect-[3/2] w-full"/>
+                <p>{slide.name}</p>
+            </div>
+        )}
+    </div>
+    <button  class="absolute z-50 top-1/2 -mt-6 button-prev -left-6 h-12 w-12 bg-red-500 text-black rounded-full flex justify-center items-center transform duration-300 hover:bg-dark hover:text-white"> 
+        <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+            <path stroke-linecap="round" stroke-linejoin="round" d="M11 17l-5-5m0 0l5-5m-5 5h12" />
+        </svg>
+    </button>
+
+    <button class="absolute z-50 top-1/2 -mt-6 button-next -right-6 h-12 w-12 bg-white text-black rounded-full flex justify-center items-center transform duration-300 hover:bg-dark hover:text-white">
+        <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+            <path stroke-linecap="round" stroke-linejoin="round" d="M13 7l5 5m0 0l-5 5m5-5H6" />
+        </svg>
+    </button>
+    <div class="swiper-pagination"></div>
+</div>
